@@ -1,6 +1,6 @@
 const form = document.getElementById('expenseForm');
 const balanceList = document.getElementById('balanceList');
-const apiUrl = 'https://script.google.com/macros/s/AKfycbwAPmRr30-y-c2olf7wD89GMj8tuON5EUgykj62DDkv9M5tkJgCCdNK0716PJVKST15/exec;  // 新しいURLを設定
+const apiUrl = 'https://script.google.com/macros/s/YOUR_NEW_SCRIPT_ID/exec';  // 新しいURLを設定
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
