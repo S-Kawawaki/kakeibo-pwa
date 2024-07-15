@@ -1,6 +1,6 @@
 const form = document.getElementById('expenseForm');
 const balanceList = document.getElementById('balanceList');
-const apiUrl = 'https://script.google.com/macros/s/AKfycbz8lxHbbcQ5DNE7cItXt2P9mX76jGyUI3E_U_7_tCloQzflC53g_MPB5l91JHL3nqcJ/exec';  // メモしたGoogle Apps ScriptのURLをここに貼り付ける
+const apiUrl = 'https://script.google.com/macros/s/AKfycbyXxZ9rYlrHNVA47_HrMASpbq5wX4EfThSbsId9uZYG0rLT0ZKa5Dp1xmosJvjmWcTB/exec';  // メモしたGoogle Apps ScriptのURLをここに貼り付ける
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
