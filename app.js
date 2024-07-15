@@ -28,16 +28,24 @@ form.addEventListener('submit', async (e) => {
 });
 
 async function updateBalance() {
-  const response = await fetch(apiUrl);
-  const data = await response.json();
-  balanceList.innerHTML = '';
-
-  data.forEach(item => {
-    const listItem = document.createElement('li');
-    listItem.textContent = `${item.date}: ${item.amount}円 - ${item.memo}`;
-    balanceList.appendChild(listItem);
-  });
-}
+    try {
+      const response = await fetch(apiUrl);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      balanceList.innerHTML = '';
+  
+      data.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.date}: ${item.amount}円 - ${item.memo}`;
+        balanceList.appendChild(listItem);
+      });
+    } catch (error) {
+      console.error('Error fetching balance:', error);
+    }
+  }
+  
 
 updateBalance();
 
